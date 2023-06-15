@@ -1,54 +1,27 @@
-function setFormMessage(formElement, type, message) {
-    const messageElement = formElement.querySelector(".form__message");
+import React from 'react';
+import '../style/Login.css'
+const Login = () => (
 
-    messageElement.textContent = message;
-    messageElement.classList.remove("form__message--success", "form__message--error");
-    messageElement.classList.add(`form__message--${type}`);
-}
-
-function setInputError(inputElement, message) {
-    inputElement.classList.add("form__input--error");
-    inputElement.parentElement.querySelector(".form__input-error-message").textContent = message;
-}
-
-function clearInputError(inputElement) {
-    inputElement.classList.remove("form__input--error");
-    inputElement.parentElement.querySelector(".form__input-error-message").textContent = "";
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    const loginForm = document.querySelector("#login");
-    const createAccountForm = document.querySelector("#createAccount");
-
-    document.querySelector("#linkCreateAccount").addEventListener("click", e => {
-        e.preventDefault();
-        loginForm.classList.add("form--hidden");
-        createAccountForm.classList.remove("form--hidden");
-    });
-
-    document.querySelector("#linkLogin").addEventListener("click", e => {
-        e.preventDefault();
-        loginForm.classList.remove("form--hidden");
-        createAccountForm.classList.add("form--hidden");
-    });
-
-    loginForm.addEventListener("submit", e => {
-        e.preventDefault();
-
-        // Perform your AJAX/Fetch login
-
-        setFormMessage(loginForm, "error", "Nom de compte et/ou Mot de passe invalide");
-    });
-
-    document.querySelectorAll(".form__input").forEach(inputElement => {
-        inputElement.addEventListener("blur", e => {
-            if (e.target.id === "signupUsername" && e.target.value.length > 0 && e.target.value.length < 3) {
-                setInputError(inputElement, "Nom de compte dois contenir au moins 3 caractères");
-            }
-        });
-
-        inputElement.addEventListener("input", e => {
-            clearInputError(inputElement);
-        });
-    });
-});
+   <div className="container">
+            <form className="form" id="login">
+              <h1 className="form__title">Bienvenue sur Easy Service</h1>
+              <div className="form__message form__message--error" />
+              <div className="form__input-group">
+                <input type="text" className="form__input" autofocus placeholder="Nom de compte" />
+                <div className="form__input-error-message" />
+              </div>
+              <div className="form__input-group">
+                <input type="password" className="form__input" autofocus placeholder="Mot de passe" />
+                <div className="form__input-error-message" />
+              </div>
+              <button className="form__button" type="submit">Se conntecter</button>
+              <p className="form__text">
+                <a href="#" className="form__link">Mot de passe oublié ?</a>
+              </p>
+              <p className="form__text">
+                <a className="form__link" href="./Register" id="linkCreateAccount">Je n'ai pas de compte ? Créer un compte</a>
+              </p>
+            </form>
+          </div>
+)
+export default Login
