@@ -1,9 +1,22 @@
 import React from 'react'
+import '../style/Demandes.css'
+import Navbar from '../Components/Navbar'
+const Demandes = () => (
 
-const MesDemandes = () => (
-  <p>
-    MesDemandes works!
+  <div>
+
+    <div>  
+      <header>
+        <Navbar/>
+      </header>
+      <p>
+    Demandes works!
 </p>
+    </div>
+  </div>
+
+  
+
 )
 
-export default MesDemandes
+export default Demandes
