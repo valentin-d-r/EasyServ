@@ -1,4 +1,9 @@
 body {
   color: black;
   font-weight: 400;
+  --color-primary: #0095E7;
+  --color-primary-dark: #0095E7;
+  --color-secondary: #252c6a;
+  --color-error: #cc3333;
+  --color-success: #4bb544;
 }

@@ -4,19 +4,13 @@ import Navbar from '../Components/Navbar'
 const Demandes = () => (
 
   <div>
-
-    <div>  
-      <header>
-        <Navbar/>
-      </header>
+    <div>
+      <Navbar />
       <p>
-    Demandes works!
-</p>
+        Demandes works!
+      </p>
     </div>
   </div>
-
-  
-
 )
 
 export default Demandes

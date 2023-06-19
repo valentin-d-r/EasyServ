@@ -1,16 +1,16 @@
 import React from 'react'
-import '../style/Home.css'
+import '../style/Profil.css'
 import Navbar from '../Components/Navbar'
-const Home = () => (
 
+const Profil = () => (
   <div>
     <div>
       <Navbar />
       <p>
-        home works!
+        Profil works
       </p>
     </div>
   </div>
 )
 
-export default Home
+export default Profil
