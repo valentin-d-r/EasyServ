@@ -1,6 +1,6 @@
 import React from 'react';
 import '../style/Login.css'
-import Footer from '../Components/Footer'
+
 
 
 const Login = () => (
@@ -27,9 +27,6 @@ const Login = () => (
         <a className="form__link" href="./Register" id="linkCreateAccount">Je n'ai pas de compte ? Créer un compte</a>
       </p>
     </form>
-    <div>
-      <Footer />
-    </div>
   </div>
 )
 export default Login

@@ -1,6 +1,6 @@
 import React from 'react';
 import '../style/Register.css'
-import Footer from '../Components/Footer'
+
 
 
 const Register = () => (
@@ -32,9 +32,6 @@ const Register = () => (
         <a className="form__link" href="./Login" id="linkLogin">J'ai déjà un compte? Se connecter</a>
       </p>
     </form>
-    <div>
-      <Footer />
-    </div>
   </div>
 
 )

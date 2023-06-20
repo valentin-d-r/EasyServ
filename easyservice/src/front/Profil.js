@@ -1,13 +1,10 @@
 import React from 'react'
 import '../style/Profil.css'
-import Navbar from '../Components/Navbar'
-import Footer from '../Components/Footer'
+
 
 const Profil = () => (
   <div>
-    <div>
-      <Navbar />
-    </div>
+
     <div id="edit-profile-form" className="dialog-box">
       <div >
         <h1>Modifier mon profil</h1>
@@ -50,9 +47,6 @@ const Profil = () => (
             </fieldset>
           </form>
         </div>
-      </div>
-      <div>
-        <Footer />
       </div>
     </div>
   </div >

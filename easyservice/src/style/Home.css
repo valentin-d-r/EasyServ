@@ -12,6 +12,12 @@
     align-content: center
 }
 
+@media(min-width:1024px) {
+    #nav-mobile {
+        display: none;
+    }
+}
+
 .box1 {
     grid-column-start: 1;
     grid-column-end: 2;
