@@ -136,34 +136,36 @@ input.Btn:hover {
     background-color: #6da9d1;
 }
 
+@media(min-width:1024px) {
+    #nav-mobile {
+        display: none;
+    }
+}
+
 /*Media Queries
   =========================*/
 @media only screen and (min-width: 768px) {
 
     /*Desktop*/
-
-
     .search {
-        float: none;
-        /* top: 0; */
+        top: 0;
         left: 0;
         right: 0;
+        display: flex;
+        align-items: center;
         margin: 0 auto;
     }
 }
 
 @media only screen and (max-width: 768px) {
 
-    /*Tablet*/
-    .profile {
-        width: 70%;
-    }
-
+    /*tab*/
     .search {
         top: 0;
         left: 0;
         right: 0;
-        display: block;
+        display: flex;
+        align-items: center;
         margin: 0 auto;
     }
 }

@@ -16,13 +16,7 @@
   display: none;
 }
 
-@media(min-width:1024px) {
-  .nav-elements {
-    display: block;
 
-
-  }
-}
 
 .nav-elements ul {
   display: flex;
@@ -89,4 +83,24 @@
 .search-bar:focus {
   width: 16rem;
   outline: none;
+}
+
+.mobile_navbar {
+  background-color: aquamarine;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media(min-width:1024px) {
+  .nav-elements {
+    display: block;
+
+  }
+
+  .mobile_navbar {
+    display: none;
+  }
+
+
 }
