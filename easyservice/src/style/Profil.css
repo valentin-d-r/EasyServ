@@ -1,0 +1,177 @@
+h1 {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.profile {
+    /*display: flex;*/
+    min-height: 100%;
+    height: auto;
+    max-width: 550px;
+    margin: 20px auto;
+    background-color: #f2f4f8;
+    border-radius: 8px;
+    box-shadow: 0 2.5px 5px #ccc;
+}
+
+.content {
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+    margin: 2.5% auto;
+    overflow: hidden;
+}
+
+.form-profil {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    justify-content: center;
+}
+
+span.photo {
+    position: relative;
+    height: 80px;
+    width: 80px;
+    border-radius: 5px;
+    margin: 10px 0 2.5px;
+    display: block;
+    top: 10%;
+    left: 10%;
+    overflow: hidden;
+    background: #ddd url("https://www.adtechnology.co.uk/images/UGM-default-user.png");
+    background-size: 100%;
+    border-radius: 100%;
+    border: 2px solid #ddd;
+}
+
+input[type="file"] {
+
+    color: #555;
+    font-size: 15px;
+    top: 25%;
+    box-shadow: none;
+    margin-left: 0rem;
+    background-color: #ededed;
+    width: 200px;
+    border: 0;
+}
+
+label {
+    color: #555;
+    line-height: 2.1em;
+    margin-left: 10px;
+}
+
+label[for="avatar"] {
+    line-height: 120px;
+}
+
+
+.profile:hover .btn {
+    opacity: 1;
+}
+
+
+/*Input Fields Styles
+  =========================*/
+fieldset textarea,
+input {
+    font-size: 15px;
+    color: #000000;
+    background-color: #f5f5f5;
+    box-shadow: 0 0 0 1px #252c6a;
+    padding: 5px;
+    width: 100%;
+    margin: 5px auto;
+    border: 0;
+    border-radius: 2.5px;
+    outline: 0;
+    transition: 0.3s ease;
+    border: none;
+}
+
+fieldset {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.3rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.btn {
+    position: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    top: 45%;
+    left: 25%;
+    background-color: #ddd;
+    padding: 10px 15px;
+    border-radius: 3px;
+    box-shadow: inset 0 0 0 2px #252c6a 0 2px 0 0 rgba(57, 203, 88, 0.5);
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+input.Btn {
+    width: 48%;
+    float: left;
+    display: block;
+    margin: 20px auto;
+    margin-left: 1%;
+    padding: 15px 0;
+    font-size: 16px;
+    color: #243b85;
+    cursor: pointer;
+    background-color: #0095E7(57, 203, 88, 0.65);
+    box-shadow: inset 0 0 0 2px #0095E7,
+        0 2px 0 0 #0095E7(57, 203, 88, 0.5);
+    transition: 0.5s ease;
+}
+
+input.Btn:hover {
+    background-color: #6da9d1;
+}
+
+/*Media Queries
+  =========================*/
+@media only screen and (min-width: 768px) {
+
+    /*Desktop*/
+
+
+    .search {
+        float: none;
+        /* top: 0; */
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    /*Tablet*/
+    .profile {
+        width: 70%;
+    }
+
+    .search {
+        top: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 520px) {
+
+    /*Phone*/
+    .profile {
+        width: 90%;
+    }
+}

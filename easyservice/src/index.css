@@ -1,6 +1,9 @@
 body {
   color: black;
   font-weight: 400;
+  font-family: 'Roboto';
+  font-size: 22px;
+  background-color: #f5f5f5;
   --color-primary: #0095E7;
   --color-primary-dark: #0095E7;
   --color-secondary: #252c6a;

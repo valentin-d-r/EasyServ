@@ -20,7 +20,7 @@
   }
 }
 
-*/ .container,
+.container,
 .form__input,
 .form__button {
   font: 500 1rem 'Quicksand', sans-serif;
@@ -92,7 +92,7 @@
 .form__button {
   width: 25%;
   text-align: center;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   font-weight: bold;
   font-size: 1.1rem;
   color: #ffffff;
