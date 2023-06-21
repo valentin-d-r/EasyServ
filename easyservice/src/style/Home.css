@@ -1,15 +1,26 @@
-.wrapper {
+.home-wrapper {
+    padding: 20px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 1em;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 20px;
+    grid-row-gap: 16px;
     justify-items: center;
     justify-content: center;
-    align-content: center
+    align-content: center;
+
 }
 
 @media(min-width:1024px) {
     #nav-mobile {
         display: none;
+    }
+}
+
+@media (max-width:600px) {
+    .home-wrapper {
+
+        grid-template-columns: 1fr;
+
+
     }
 }

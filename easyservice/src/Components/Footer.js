@@ -20,7 +20,6 @@ const Footer = () => {
                     <a href="https://twitter.com/roy_amaury"><img src={LogoTWITTER} width={30} height={30}
                         title="LogoTWITTER" alt="Twitter"></img></a>
                 </div>
-
             </div>
             <div></div>
         </footer>

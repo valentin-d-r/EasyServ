@@ -11,3 +11,18 @@ body {
   --color-error: #cc3333;
   --color-success: #4bb544;
 }
+
+input {
+  font-size: 15px;
+  color: #000000;
+  background-color: #f5f5f5;
+  box-shadow: 0 0 0 1px #252c6a;
+  padding: 5px;
+  width: 100%;
+  margin: 5px auto;
+  border: 0;
+  border-radius: 2.5px;
+  outline: 0;
+  transition: 0.3s ease;
+  border: none;
+}

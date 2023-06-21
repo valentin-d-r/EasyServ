@@ -16,7 +16,6 @@ const Navbar = () => {
         </div>
         <div className="nav-elements">
           <ul>
-
             <li>
               <NavLink to="/">Accueil</NavLink>
             </li>
@@ -34,7 +33,6 @@ const Navbar = () => {
               <NavLink to="../Login">Se connecter</NavLink>
             </li>
           </ul>
-
         </div>
       </div>
     </nav>
