@@ -87,9 +87,13 @@
 
 .mobile_navbar {
   background-color: aquamarine;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding: 12px 0;
 }
 
 @media(min-width:1024px) {
@@ -101,6 +105,4 @@
   .mobile_navbar {
     display: none;
   }
-
-
 }
