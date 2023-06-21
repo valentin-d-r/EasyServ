@@ -27,3 +27,9 @@
     display: flex;
     margin: 1rem;
 }
+
+@media (max-width:1024px) {
+    .footer {
+        padding-bottom: 62px;
+    }
+}

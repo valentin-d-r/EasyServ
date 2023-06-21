@@ -13,7 +13,7 @@ const Mobile_Navbar = () => {
                 <a href="/"><img src={LogoAccueil} width={25} height={25}
                     title="LogoAccueil" alt="Accueil"></img></a>
 
-                <a href="../Demandes"><img src={LogoDemandes} width={25} height={25}
+                <a href="../Demandes"><img src={LogoDemandes} width={35} height={35}
                     title="LogoDemandes" alt="Demandes"></img></a>
 
                 <a href="../Profil"><img src={LogoProfil} width={25} height={25}
