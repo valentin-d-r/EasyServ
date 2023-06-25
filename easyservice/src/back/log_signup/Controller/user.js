@@ -10,21 +10,46 @@ const Sqlqueries = require('../Models/user');
 
 function checkEmailUniqueness(email) { 
     return new Promise((resolve, reject) => {
-    
-      con.query(queries.countUser, email , (error, results) => {
+      var con = mysql.createConnection({
+        host: "127.0.0.1",
+        user: "root",
+        password: "",
+        database: "easyservice"
+      });
+      
+      let sql = "SELECT COUNT(*) as count FROM utilisateur WHERE mail = ?;";
+      
+  
+      con.query(sql, email , (error, results) => {
         if (error) {
           reject(error);
         } 
+
         else {
           console.log("result check :");
           console.log(results);      
           const count = results[0].count;
+
           if (count > 0) {          // Compte le nombre de retour du count pour vois si mail existant
-            reject(new Error('Cet email est déjà utilisé'));            
+            reject(new Error('Cet email est déjà utilisé'));
+            con.end((error) => {
+              if (error) {
+                  console.error('Erreur lors de la fermeture de la connexion :', error);
+              } else {
+                  console.log('Connexion fermée avec succès');
+              }
+              });            
           } 
           
           else {
             resolve();
+            con.end((error) => {
+              if (error) {
+                  console.error('Erreur lors de la fermeture de la connexion :', error);
+              } else {
+                  console.log('Connexion fermée avec succès');
+              }
+              });
           }
         }
       });
@@ -110,8 +135,10 @@ exports.login = (req, res, next) => {
             res.status(409).json({ error: "Echec de fermeture de connexion" });
             throw err;
         }
-        console.log("------>result");
-        console.log(result[0].password);
+        if (!result || result.length === 0){
+          return res.status(404).json({message: "Utilisateur introuvable"});
+
+        }
         
         bcrypt.compare(req.body.password, result[0].password)
                 .then(valid => {
