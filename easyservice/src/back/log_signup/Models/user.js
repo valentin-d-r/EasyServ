@@ -40,13 +40,21 @@ function Sqlqueries(req) {
     const inserts = [user.Firstname, user.Surname, user.Mail, passwordCrypt, req.params.id];
     return mysql.format(sql, inserts);
   }
+
+  function createDeleteQuery() {
+    
+    let sql = "DELETE FROM utilisateur WHERE id = ?;" ;
+    const inserts = [req.params.id];
+    return mysql.format(sql, inserts);
+  }
   
 
   return {
     insertUser: createInsertQuery(),
     selectUser: createSelectQuery(),
     countUser: createCountQuery(),
-    updateUser: createUpdateQuery()
+    updateUser: createUpdateQuery(),
+    deleteUser: createDeleteQuery()
   };
 }
 

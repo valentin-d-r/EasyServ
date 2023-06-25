@@ -203,3 +203,36 @@ exports.modifyUser = (req, res, next) => {
   });
 
 };
+
+exports.deleteUser = (req,res, next) => {
+
+    var queries = Sqlqueries(req);
+    console.log(queries.deleteUser);
+    
+
+    var con = mysql.createConnection({
+      host: "127.0.0.1",
+      user: "root",
+      password: "",
+      database: "easyservice"
+    });
+
+    con.query(queries.deleteUser, function (err, result) {
+      if (err) {
+          console.error('Erreur lors de l\'exécution de la requête:', err);
+          res.status(500).json({error: 'Erreur lors de la suppression de l\'utilisateur'});
+          return;
+      }
+
+      res.status(200).json({message: "Suppression réaliser"});
+
+      con.end((error) => {
+          if (error) {
+              console.error('Erreur lors de la fermeture de la connexion :', error);
+          } else {
+              console.log('Connexion fermée avec succès');
+          }
+      });
+  });
+
+};
