@@ -5,9 +5,6 @@ const mysql = require('mysql');
 const Sqlqueries = require('../Models/user');
 
 
-
-
-
 function checkEmailUniqueness(email) { 
     return new Promise((resolve, reject) => {
       var con = mysql.createConnection({
@@ -56,7 +53,8 @@ function checkEmailUniqueness(email) {
     });
   };        //fonction check si le mail est deja utilisé
   
-exports.signup = (req, res, next) => {
+
+ exports.signup = (req, res, next) => {
     
     var queries = Sqlqueries(req);
     var con = mysql.createConnection({
