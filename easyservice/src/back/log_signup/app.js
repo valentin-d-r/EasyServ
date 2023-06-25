@@ -1,19 +1,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const mysql = require('mysql');
 
 const userRoutes = require('./Routes/user'); // Route utilisé pour gestion user
 
 const app = express();
 
-mongoose.connect('mongodb+srv://rva:Cesi2023@cluster1.9quyo8a.mongodb.net/?retryWrites=true&w=majority',
-  { useNewUrlParser: true,
-    useUnifiedTopology: true })
-  .then(() => console.log('Connexion à MongoDB réussie !'))
-  .catch(() => console.log('Connexion à MongoDB échouée !')); // Chaine connexion a la bdd mongoDB
-
-
-
-app.use('/api/auth', userRoutes); 
+app.use(express.json());
+app.use('/api/auth', userRoutes); //Appel de userRoutes du ficher routes/user.js
 
   
 module.exports = app;
