@@ -6,16 +6,7 @@ const Sqlqueries = require('../Models/user');
 
 
 
-// (req, next) => {
-//     queries = Sqlqueries(req);
-// };
 
-// var con = mysql.createConnection({
-//     host: "127.0.0.1",
-//     user: "root",
-//     password: "",
-//     database: "easyservice"
-//   });   //Variable de connexion à MySQL 
 
 function checkEmailUniqueness(email) { 
     return new Promise((resolve, reject) => {
@@ -97,7 +88,7 @@ exports.signup = (req, res, next) => {
 
       });
 
-}; // Fonction de création d'utilisateur
+};          // Fonction de création d'utilisateur
 
 
 
@@ -177,4 +168,38 @@ exports.login = (req, res, next) => {
     //             .catch(error => res.status(500).json({ error }));
     //     })
     //     .catch(error => res.status(500).json({ error }));
- };     // Fonction de login
+ };         // Fonction de login
+
+
+exports.modifyUser = (req, res, next) => {
+
+    var queries = Sqlqueries(req);
+    console.log(queries.updateUser);
+    
+
+    var con = mysql.createConnection({
+      host: "127.0.0.1",
+      user: "root",
+      password: "",
+      database: "easyservice"
+    });
+
+    con.query(queries.updateUser, function (err, result) {
+      if (err) {
+          console.error('Erreur lors de l\'exécution de la requête:', err);
+          res.status(500).json({error: 'Erreur lors de la modification de l\'utilisateur'});
+          return;
+      }
+
+      res.status(200).json({message: "Modification réaliser"});
+
+      con.end((error) => {
+          if (error) {
+              console.error('Erreur lors de la fermeture de la connexion :', error);
+          } else {
+              console.log('Connexion fermée avec succès');
+          }
+      });
+  });
+
+};
