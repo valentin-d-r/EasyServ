@@ -9,6 +9,8 @@ import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Mobile_Navbar from "./Components/Mobile_Navbar";
 import Rating from "./front/Rating";
+import Parrainage from "./front/Parrainage";
+import Chat from "./front/Parrainage"
 function App() {
   return (
     <body>
@@ -22,7 +24,13 @@ function App() {
           <Route path="/Register" element={<Register />} />
           <Route path="/Profil" element={<Profil />} />
           <Route path="/Demandes" element={<MesDemandes />} />
+          {/* <route path="/Chat" element={<Chat />} /> */}
+          {/* route pour voir l'avancement des offres */}
+          {/* route pour accepter / refuser des offres */}
+          {/* route pour voir le suivie de la demande ( presta) */}
+          {/* route des pages admin */}
           <Route path="/Rating" element={<Rating />} />
+          <Route path="/Parrainage" element={<Parrainage />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </div>

@@ -94,6 +94,9 @@
   border-top: 1px solid hsl(0, 0%, 90%);
 }
 
+
+
+
 @media(min-width:1024px) {
   .nav-elements {
     display: block;

@@ -1,0 +1,45 @@
+.parrainage-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.parrainage-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.parrainage-image {
+    width: 250px;
+    padding: 20px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.parrainage-image img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+}
+
+.parrainage-image p {
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .parrainage-image {
+        width: 50%;
+        /* Pour afficher 2 images par ligne sur les tablettes */
+    }
+}
+
+@media (max-width: 480px) {
+    .parrainage-image {
+        width: 100%;
+        /* Pour afficher 1 image par ligne sur les téléphones */
+    }
+}

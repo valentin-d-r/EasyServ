@@ -1,14 +1,22 @@
-import { NavLink } from 'react-router-dom'
-import LogoES from '../LogoES.png'
-import '../style/Navbar.css'
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import LogoES from '../LogoES.png';
+import '../style/Navbar.css';
 
 const Navbar = () => {
+  const [showNotifications, setShowNotifications] = useState(false);
+
+  const toggleNotifications = () => {
+    setShowNotifications(!showNotifications);
+  };
+
   return (
     <nav className="navbar">
       <div className="nav-container">
         <div className="nav-logo">
-          <a href="/"><img src={LogoES} width={70} height={70}
-            title="LogoES" alt="LogoES"></img></a>
+          <a href="/">
+            <img src={LogoES} width={70} height={70} title="LogoES" alt="LogoES" />
+          </a>
         </div>
         <div className="search">
           <input type="search" className="search-bar" placeholder="Search..." />
@@ -25,10 +33,28 @@ const Navbar = () => {
             <li>
               <NavLink to="../Profil">Mon profil</NavLink>
             </li>
+            <li>
+              <NavLink to="../Parrainage">Parrainage</NavLink>
+            </li>
           </ul>
         </div>
         <div className="nav-elements">
           <ul>
+            <li>
+              <button className="notification-toggle" onClick={toggleNotifications}>
+                Notifications
+                {showNotifications && <span className="notification-badge">3</span>}
+              </button>
+              {showNotifications && (
+                <div className="notification-dropdown">
+                  <ul className="notification-list">
+                    <li className="notification-item">Notification 1</li>
+                    <li className="notification-item">Notification 2</li>
+                    <li className="notification-item">Notification 3</li>
+                  </ul>
+                </div>
+              )}
+            </li>
             <li>
               <NavLink to="../Login">Se connecter</NavLink>
             </li>
@@ -36,7 +62,12 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
+
+
+
+
+

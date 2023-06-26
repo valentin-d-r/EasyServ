@@ -32,7 +32,7 @@ function Rating() {
 
             <h3>Commentaire</h3>
             <textarea
-                id="comment"
+                id="ratetxtarea"
                 rows="4"
                 cols="50"
                 value={comment}
