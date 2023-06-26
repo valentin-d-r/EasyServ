@@ -8,7 +8,7 @@ import NotFound from './front/Erreur404';
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Mobile_Navbar from "./Components/Mobile_Navbar";
-
+import Rating from "./front/Rating";
 function App() {
   return (
     <body>
@@ -22,6 +22,7 @@ function App() {
           <Route path="/Register" element={<Register />} />
           <Route path="/Profil" element={<Profil />} />
           <Route path="/Demandes" element={<MesDemandes />} />
+          <Route path="/Rating" element={<Rating />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </div>
