@@ -24,7 +24,7 @@ const Demandes = () => {
 
   return (
     <div>
-      <h1>Modifier la demande du client</h1>
+      <h1>Créer une demande</h1>
       <form onSubmit={handleSubmit}>
         <label>
           Nom du client:
