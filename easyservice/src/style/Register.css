@@ -99,10 +99,11 @@
   outline: none;
   cursor: pointer;
   background: var(--color-primary);
+  border-radius: 4px;
 }
 
 .form__button:hover {
-  background: var(--color-primary-dark);
+  background: var(--color-secondary);
 }
 
 .form__button:active {

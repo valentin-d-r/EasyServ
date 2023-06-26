@@ -1,12 +1,11 @@
 .Rating {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
     text-align: center;
+    padding: 20px;
 }
 
 h1 {
     font-size: 24px;
+    font-weight: bold;
     margin-bottom: 20px;
 }
 
@@ -16,44 +15,82 @@ h3 {
 }
 
 .star-rate {
-    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 20px;
 }
 
-.star-rate span {
-    color: #ccc;
+.star-icon {
+    font-size: 50px;
     cursor: pointer;
-    transition: color 0.3s ease;
+    color: #ddd;
+    transition: color 0.2s;
 }
 
-.star-rate span:hover,
-.star-rate span.active {
-    color: #ffc107;
+.star-icon.filled {
+    color: #ffca28;
 }
 
 #ratetxtarea {
-    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
     height: 120px;
     padding: 10px;
+    resize: vertical;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
     margin-bottom: 20px;
+    font-size: 16px;
 }
 
-button {
-    display: block;
-    margin: 0 auto;
+#rate-button {
+    background-color: #0095E7;
+    color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
-    background-color: #007bff;
-    color: #fff;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #0056b3;
+#rate-button:hover {
+    background-color: #252c6a;
+}
+
+@media screen and (max-width: 768px) {
+    .Rating {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .star-icon {
+        font-size: 20px;
+    }
+
+    #ratetxtarea {
+        height: 100px;
+        margin-bottom: 15px;
+    }
+
+    #rate-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+.star-rate {
+    direction: rtl;
+}
+
+.star-icon {
+    transform: rotateY(180deg);
 }

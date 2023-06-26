@@ -47,7 +47,7 @@ const Demandes = () => {
         </label>
         <br />
         {/* Autres champs de demande */}
-        <button type="submit">Enregistrer</button>
+        <button id='demande-button' type="submit">Publier</button>
       </form>
     </div>
   );

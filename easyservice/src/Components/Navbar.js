@@ -36,6 +36,9 @@ const Navbar = () => {
             <li>
               <NavLink to="../Parrainage">Parrainage</NavLink>
             </li>
+            <li>
+              <NavLink to="../Chat">Discussion</NavLink>
+            </li>
           </ul>
         </div>
         <div className="nav-elements">
