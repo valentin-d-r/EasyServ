@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 import React, {useState} from "react";
 import "../style/Register.css";
-const crypt = require('bcrypt');
-const saltRounds = 10;
 
 export default function InscriptionPage() {
   const [email, setEmail] = useState('');
@@ -11,7 +9,6 @@ export default function InscriptionPage() {
   const [prenom, setPrenom] = useState('');
 
 
-  const hash = crypt.hashSync(myPlaintextPassword, saltRounds);
 
 //Faire l'envoie de données d'enregistrement dans le front avec les variables email, password, nom et prenom
   
