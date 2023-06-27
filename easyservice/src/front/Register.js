@@ -107,7 +107,7 @@ const Register = () => (
       <div className="form__input-group">
         <label>
           <input
-            type="checkbox"
+            type="radio"
             id="1"
             name="Role"
             className="form__input"
@@ -121,7 +121,7 @@ const Register = () => (
       <div className="form__input-group">
         <label>
           <input
-            type="checkbox"
+            type="radio"
             id="2"
             name="Role"
             className="form__input"
