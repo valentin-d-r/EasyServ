@@ -12,6 +12,8 @@ import Rating from "./front/Rating";
 import Parrainage from "./front/Parrainage";
 import Chat from "./front/Chat";
 import Follow_Offer from "./front/Follow_Offer";
+import Dashboard_presta from "./front/Dashboard_presta";
+
 function App() {
   return (
     <body>
@@ -27,7 +29,7 @@ function App() {
           <Route path="/Demandes" element={<MesDemandes />} />
           <Route path="/Chat" element={<Chat />} />
           <Route path="/Mesoffres" element={<Follow_Offer />} />
-          {/* route pour accepter / refuser des offres */}
+          <Route path="/Dashboardpresta" element={<Dashboard_presta />} />
           {/* route pour voir le suivie de la demande ( presta) */}
           {/* route des pages admin */}
           <Route path="/Rating" element={<Rating />} />

@@ -1,29 +1,29 @@
 /* Styles généraux */
-.Follow_Offer-container {
+.Dashboard_presta-container {
     font-family: Arial, sans-serif;
     padding: 20px;
 }
 
 /* Styles du tableau */
-.Follow_Offer-table {
+.Dashboard_presta-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
 }
 
-.Follow_Offer-table th,
-.Follow_Offer-table td {
+.Dashboard_presta-table th,
+.Dashboard_presta-table td {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: left;
 }
 
-.Follow_Offer-table th {
+.Dashboard_presta-table th {
     background-color: #f2f2f2;
 }
 
 /* Styles des boutons */
-.Follow_Offer-edit-button {
+.Dashboard_presta-accepter-button {
     max-width: 100%;
     min-width: 100%;
     border: none;
@@ -31,12 +31,12 @@
     cursor: pointer;
     font-weight: bold;
     color: #fff;
-    background-color: #0095E7;
+    background-color: #4bb544;
     margin: 2px;
     padding: 8px;
 }
 
-.Follow_Offer-delete-button {
+.Dashboard_presta-refuser-button {
     max-width: 100%;
     min-width: 100%;
     border: none;
@@ -47,20 +47,24 @@
     background-color: #cc3333;
     margin: 2px;
     padding: 8px;
+}
 
+/* Styles du statut */
+.Dashboard_presta-status {
+    font-weight: bold;
 }
 
 /* Styles responsives */
 @media screen and (max-width: 768px) {
 
-    .Follow_Offer-table th,
-    .Follow_Offer-table td {
+    .Dashboard_presta-table th,
+    .Dashboard_presta-table td {
         padding: 8px;
         font-size: 14px;
     }
 
-    .Follow_Offer-edit-button,
-    .Follow_Offer-delete-button {
+    .Dashboard_presta-accepter-button,
+    .Dashboard_presta-refuser-button {
         padding: 6px 10px;
         font-size: 12px;
     }

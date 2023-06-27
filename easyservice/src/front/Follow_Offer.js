@@ -7,12 +7,18 @@ const Follow_Offer = () => {
             id: 1,
             nom: 'Service 1',
             description: 'Description du service 1',
-            etat: 'En cours',
+            etat: 'Pas accepté',
         },
         {
             id: 2,
             nom: 'Service 2',
             description: 'Description du service 2',
+            etat: 'En cours',
+        },
+        {
+            id: 3,
+            nom: 'Service 3',
+            description: 'Description du service 3',
             etat: 'Terminé',
         },
         // Ajoutez d'autres services ici...
