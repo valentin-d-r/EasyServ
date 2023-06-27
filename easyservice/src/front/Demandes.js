@@ -27,7 +27,7 @@ const Demandes = () => {
       <h1>Créer une demande</h1>
       <form onSubmit={handleSubmit}>
         <label>
-          Nom du client:
+          Nom de la demande:
           <input
             type="text"
             name="clientName"

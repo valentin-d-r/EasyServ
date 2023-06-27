@@ -10,7 +10,8 @@ import Footer from "./Components/Footer";
 import Mobile_Navbar from "./Components/Mobile_Navbar";
 import Rating from "./front/Rating";
 import Parrainage from "./front/Parrainage";
-import Chat from "./front/Chat"
+import Chat from "./front/Chat";
+import Follow_Offer from "./front/Follow_Offer";
 function App() {
   return (
     <body>
@@ -25,7 +26,7 @@ function App() {
           <Route path="/Profil" element={<Profil />} />
           <Route path="/Demandes" element={<MesDemandes />} />
           <Route path="/Chat" element={<Chat />} />
-          {/* route pour voir l'avancement des offres */}
+          <Route path="/Mesoffres" element={<Follow_Offer />} />
           {/* route pour accepter / refuser des offres */}
           {/* route pour voir le suivie de la demande ( presta) */}
           {/* route des pages admin */}

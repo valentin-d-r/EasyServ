@@ -29,11 +29,9 @@ label {
     border-radius: 4px;
     font-size: 16px;
     resize: vertical;
-}
-
-textarea {
     height: 120px;
 }
+
 
 #demande-button[type="submit"] {
     margin: 0 auto;
