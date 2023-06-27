@@ -23,7 +23,6 @@ const Follow_Offer = () => {
         },
         // Ajoutez d'autres services ici...
     ];
-
     return (
         <div className="Follow_Offer-container">
             <h1>Avancement des services</h1>
@@ -53,5 +52,4 @@ const Follow_Offer = () => {
         </div>
     );
 };
-
 export default Follow_Offer;

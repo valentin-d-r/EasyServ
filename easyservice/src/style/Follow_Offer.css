@@ -24,8 +24,8 @@
 
 /* Styles des boutons */
 .Follow_Offer-edit-button {
-    max-width: 100%;
-    min-width: 100%;
+    max-width: 10rem;
+    width: 100%;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -37,8 +37,8 @@
 }
 
 .Follow_Offer-delete-button {
-    max-width: 100%;
-    min-width: 100%;
+    max-width: 10rem;
+    width: 100%;
     border: none;
     border-radius: 4px;
     cursor: pointer;

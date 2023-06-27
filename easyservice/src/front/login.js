@@ -1,16 +1,16 @@
 import React from "react";
 import "../style/Login.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import Register from "./Register";
 
 const handleSubmit = async (e) => {
   console.log("----|||||test");
   e.preventDefault();
-
   // Récupérer les valeurs des champs du formulaire
   const mail = e.target.elements.Email.value;
   const password = e.target.elements.Password.value;
   // Ajoutez d'autres champs selon vos besoins
-
   // Créez un objet contenant les données à envoyer
   const data = {
     mail,
@@ -49,7 +49,7 @@ const Login = () => (
           id="mail"
           name="mail"
           className="form__input"
-          autofocus
+          autoFocus
           placeholder="Email"
         />
         <div className="form__input-error-message" />
@@ -60,7 +60,6 @@ const Login = () => (
           id="password"
           name="password"
           className="form__input"
-          autofocus
           placeholder="Mot de passe"
         />
         <div className="form__input-error-message" />
@@ -76,9 +75,9 @@ const Login = () => (
         </a>
       </p>
       <p className="form__text">
-        <a className="form__link" href="./Register" id="linkCreateAccount">
+        <Link className="form__link" to="/register" components={Register} id="linkCreateAccount">
           Je n'ai pas de compte ? Créer un compte
-        </a>
+        </Link>
       </p>
     </form>
   </div>

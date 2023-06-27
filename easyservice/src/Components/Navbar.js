@@ -28,16 +28,16 @@ const Navbar = () => {
               <NavLink to="/">Accueil</NavLink>
             </li>
             <li>
-              <NavLink to="../Demandes">Mes demandes</NavLink>
+              <NavLink to="/demandes">Mes demandes</NavLink>
             </li>
             <li>
-              <NavLink to="../Profil">Mon profil</NavLink>
+              <NavLink to="/profil">Mon profil</NavLink>
             </li>
             <li>
-              <NavLink to="../Parrainage">Parrainage</NavLink>
+              <NavLink to="/parrainage" > Parrainage</NavLink>
             </li>
             <li>
-              <NavLink to="../Chat">Discussion</NavLink>
+              <NavLink to="/chat">Discussion</NavLink>
             </li>
           </ul>
         </div>
@@ -59,7 +59,7 @@ const Navbar = () => {
               )}
             </li>
             <li>
-              <NavLink to="../Login">Se connecter</NavLink>
+              <NavLink to="/login">Se connecter</NavLink>
             </li>
           </ul>
         </div>

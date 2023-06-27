@@ -23,17 +23,17 @@ function App() {
       <div className="EasyService">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Login" element={<Login />} />
-          <Route path="/Register" element={<Register />} />
-          <Route path="/Profil" element={<Profil />} />
-          <Route path="/Demandes" element={<MesDemandes />} />
-          <Route path="/Chat" element={<Chat />} />
-          <Route path="/Mesoffres" element={<Follow_Offer />} />
-          <Route path="/Dashboardpresta" element={<Dashboard_presta />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/profil" element={<Profil />} />
+          <Route path="/demandes" element={<MesDemandes />} />
+          <Route path="/chat" element={<Chat />} />
+          <Route path="/mesoffres" element={<Follow_Offer />} />
+          <Route path="/dashboard-presta" element={<Dashboard_presta />} />
           {/* route pour voir le suivie de la demande ( presta) */}
           {/* route des pages admin */}
-          <Route path="/Rating" element={<Rating />} />
-          <Route path="/Parrainage" element={<Parrainage />} />
+          <Route path="/rating" element={<Rating />} />
+          <Route path="/parrainage" element={<Parrainage />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </div>
