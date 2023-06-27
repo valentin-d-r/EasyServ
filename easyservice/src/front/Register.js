@@ -8,28 +8,30 @@ const handleSubmit = async (e) => {
   e.preventDefault();
   
   // Récupérer les valeurs des champs du formulaire
-  const prenom = e.target.elements.Name.value;
-  const nom = e.target.elements.LastName.value;
-  const email = e.target.elements.Email.value;
+  const firstname = e.target.elements.Name.value;
+  const surname = e.target.elements.LastName.value;
+  const mail = e.target.elements.Email.value;
   const password = e.target.elements.Password.value;
   // Ajoutez d'autres champs selon vos besoins
 
   // Créez un objet contenant les données à envoyer
   const data = {
-    nom,
-    prenom,
-    email,
+    firstname,
+    surname,
+    mail,
     password,
     // Ajoutez d'autres champs selon vos besoins
   };
-
+  console.log(data);
   try {
-    // Effectuer la requête POST
-    console.log("----|||||test");
-    const response = await axios.post('localhost:3000/', data);
+    // Effectuer la requête POST avec un en-tête Content-Type explicitement défini
+    const response = await axios.post('http://localhost:3150/api/auth/signup/', data, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
 
     // Traitez la réponse si nécessaire
-    console.log("----|||||test");
     console.log(response.data);
   } catch (error) {
     // Gérez les erreurs de requête

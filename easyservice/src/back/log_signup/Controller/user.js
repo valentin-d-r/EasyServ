@@ -75,9 +75,13 @@ function checkEmailUniqueness(email) {
 
     checkEmailUniqueness(req.body.mail)
       .then(() => {
-
+        console.log("emailckeck");
         con.query(queries.insertUser, function (err, result) {
-            if (err) throw err;
+            if (err) {
+              console.log("erreur requete");
+              console.log(err);
+              throw err;  
+            }
             console.log("------>result");
             console.log(result);
           });   //Insertion dans la bdd
@@ -86,11 +90,11 @@ function checkEmailUniqueness(email) {
         if (error) {
             console.error('Erreur lors de la fermeture de la connexion :', error);
         } else {
-            console.log('Connexion fermée avec succès');
+            console.log('Connexion fermée avec succès !');
         }
         });     //Fermeture de la connexion
 
-        res.status(200).json({ message: 'Adresse e-mail valide' }); //Envoi du message validation
+        res.status(200).json({ message: 'Adresse e-mail valider' }); //Envoi du message validation
 
       })
 
