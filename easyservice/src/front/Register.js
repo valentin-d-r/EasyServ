@@ -13,6 +13,7 @@ const handleSubmit = async (e) => {
   const surname = e.target.elements.LastName.value;
   const mail = e.target.elements.Email.value;
   const password = e.target.elements.Password.value;
+  const role = e.target.elements.Role.id;
   // Ajoutez d'autres champs selon vos besoins
 
   // Créez un objet contenant les données à envoyer
@@ -21,16 +22,21 @@ const handleSubmit = async (e) => {
     surname,
     mail,
     password,
+    role,
     // Ajoutez d'autres champs selon vos besoins
   };
   console.log(data);
   try {
     // Effectuer la requête POST avec un en-tête Content-Type explicitement défini
-    const response = await axios.post('http://localhost:3150/api/auth/signup/', data, {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    const response = await axios.post(
+      "http://localhost:3150/api/auth/signup/",
+      data,
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     // Traitez la réponse si nécessaire
     console.log(response.data);
@@ -62,7 +68,6 @@ const Register = () => (
           id="LastName"
           name="LastName"
           className="form__input"
-
           placeholder="Nom"
         />
         <div className="form__input-error-message" />
@@ -97,16 +102,44 @@ const Register = () => (
         <div className="form__input-error-message" />
       </div>
       <div className="form__input-group">
+        <label>
+          <input
+            type="radio"
+            id="1"
+            name="Role"
+            className="form__input"
+            autoFocus
+            placeholder="Utilisateur"
+          />
+          Utilisateur
+        </label>
+        <div className="form__input-error-message" />
+      </div>
+      <div className="form__input-group">
+        <label>
+          <input
+            type="radio"
+            id="2"
+            name="Role"
+            className="form__input"
+            autoFocus
+            placeholder="Prestataire"
+          />
+          Prestataire
+        </label>
+        <div className="form__input-error-message" />
+      </div>
+      <div className="form__input-group">
         <button className="form__button" type="submit">
           Créer mon compte
         </button>
-      </div>
+      </div >
       <p className="form__text">
         <Link className="form__link" to="/login" components={login} id="linkLogin">
           J'ai déjà un compte? Se connecter
         </Link>
-      </p>
-    </form>
-  </div>
+      </p >
+    </form >
+  </div >
 )
 export default Register

@@ -148,9 +148,11 @@ exports.login = (req, res, next) => {
                         return res.status(401).json({ message: 'Paire login/mot de passe incorrecte' }); //Message a renvoyer en combinaison incorect
                     }
                     res.status(200).json({
-                        userId: result[0].id,
                         token: jwt.sign(
-                            { userId: result[0].id },
+                            { 
+                              userId: result[0].id,
+                              role: result[0].role
+                            },
                             'chiffrement',  //Clé de chiffrement du token
                             { expiresIn: '24h' })
                     });
