@@ -34,7 +34,7 @@ const Navbar = () => {
               <NavLink to="/profil">Mon profil</NavLink>
             </li>
             <li>
-              <NavLink to="/parrainage" > Parrainage</NavLink>
+              <NavLink to="/parrainage" >Parrainage</NavLink>
             </li>
             <li>
               <NavLink to="/chat">Discussion</NavLink>
@@ -44,7 +44,7 @@ const Navbar = () => {
         <div className="nav-elements">
           <ul>
             <li>
-              <button className="notification-toggle" onClick={toggleNotifications}>
+              <button id='notifbutton' className="notification-toggle" onClick={toggleNotifications}>
                 Notifications
                 {showNotifications && <span className="notification-badge">3</span>}
               </button>

@@ -1,47 +1,56 @@
 /* Styles généraux */
-#tabdmd {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.Dashboard_presta-container {
+.container {
     font-family: Arial, sans-serif;
     padding: 20px;
 }
 
-/* Styles du tableau */
-.Dashboard_presta-table {
+#dashpresta {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
 }
 
-.Dashboard_presta-table th,
-.Dashboard_presta-table td {
+th,
+td {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: left;
 }
 
-.Dashboard_presta-table th {
+th {
     background-color: #f2f2f2;
 }
 
+tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Styles spécifiques pour le tableau de bord prestataire */
+table {
+    margin-bottom: 20px;
+}
+
 /* Styles des boutons */
-.Dashboard_presta-accepter-button {
-    width: 100%;
+.dashpresta-edit-button {
     max-width: 10rem;
+    width: 100%;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
     color: #fff;
-    background-color: #4bb544;
+    background-color: #252c6a;
     margin: 2px;
     padding: 8px;
 }
 
-.Dashboard_presta-refuser-button {
+.dashpresta-delete-button {
     max-width: 10rem;
     width: 100%;
     border: none;
@@ -54,23 +63,24 @@
     padding: 8px;
 }
 
-/* Styles du statut */
-.Dashboard_presta-status {
-    font-weight: bold;
-}
-
-/* Styles responsives */
-@media screen and (max-width: 768px) {
-
-    .Dashboard_presta-table th,
-    .Dashboard_presta-table td {
-        padding: 8px;
-        font-size: 14px;
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
     }
 
-    .Dashboard_presta-accepter-button,
-    .Dashboard_presta-refuser-button {
-        padding: 6px 10px;
+    #dashpresta {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+    button {
         font-size: 12px;
+        margin-bottom: 6px;
     }
 }

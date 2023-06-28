@@ -25,7 +25,7 @@ const Follow_Offer = () => {
     ];
     return (
         <div className="Follow_Offer-container">
-            <h1>Avancement des services</h1>
+            <h1 id='followh1'>Avancement des services</h1>
             <table className="Follow_Offer-table">
                 <thead>
                     <tr>

@@ -12,7 +12,7 @@ import Register from "./Register";
 
 const handleSubmit = async (e) => {
   console.log("----|||||test");
-  
+
   e.preventDefault();
   // Récupérer les valeurs des champs du formulaire
   const mail = e.target.elements.Email.value;
@@ -42,9 +42,8 @@ const handleSubmit = async (e) => {
     // Gérez les erreurs de requête
     console.error(error);
   }
-  
-};
 
+};
 
 const Login = () => (
   <div className="log-container">

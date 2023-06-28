@@ -95,6 +95,10 @@
   border-top: 1px solid hsl(0, 0%, 90%);
 }
 
+#notifbutton {
+  color: white;
+  background-color: #252c6a;
+}
 
 
 

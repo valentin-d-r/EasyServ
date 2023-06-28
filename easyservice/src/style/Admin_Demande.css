@@ -1,34 +1,43 @@
 /* Styles généraux */
-#followh1 {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.Follow_Offer-container {
+.container {
     font-family: Arial, sans-serif;
     padding: 20px;
 }
 
-/* Styles du tableau */
-.Follow_Offer-table {
+#dashdmd {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
 }
 
-.Follow_Offer-table th,
-.Follow_Offer-table td {
+th,
+td {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: left;
 }
 
-.Follow_Offer-table th {
+th {
     background-color: #f2f2f2;
 }
 
+tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Styles spécifiques pour le tableau de demandes */
+table {
+    margin-bottom: 20px;
+}
+
 /* Styles des boutons */
-.Follow_Offer-edit-button {
+.dashdemande-edit-button {
     max-width: 10rem;
     width: 100%;
     border: none;
@@ -36,12 +45,12 @@
     cursor: pointer;
     font-weight: bold;
     color: #fff;
-    background-color: #0095E7;
+    background-color: #252c6a;
     margin: 2px;
     padding: 8px;
 }
 
-.Follow_Offer-delete-button {
+.dashdemande-delete-button {
     max-width: 10rem;
     width: 100%;
     border: none;
@@ -54,18 +63,19 @@
     padding: 8px;
 }
 
-/* Styles responsives */
-@media screen and (max-width: 768px) {
-
-    .Follow_Offer-table th,
-    .Follow_Offer-table td {
-        padding: 8px;
-        font-size: 14px;
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
     }
 
-    .Follow_Offer-edit-button,
-    .Follow_Offer-delete-button {
-        padding: 6px 10px;
-        font-size: 12px;
+    #dashdmd {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    th,
+    td {
+        padding: 8px;
     }
 }

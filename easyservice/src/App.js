@@ -14,7 +14,9 @@ import Parrainage from "./front/Parrainage";
 import Chat from "./front/Chat";
 import Follow_Offer from "./front/Follow_Offer";
 import Dashboard_presta from "./front/Dashboard_presta";
-
+import Admin_Client from "./Admin/Admin_Client";
+import Admin_Prestataire from "./Admin/Admin_Prestataire";
+import Admin_Demande from "./Admin/Admin_Demande";
 function App() {
   return (
     <body>
@@ -28,14 +30,15 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/profil" element={<Profil />} />
           <Route path="/profil-edit" element={<EditProfil />} />
+          <Route path="/rating" element={<Rating />} />
           <Route path="/demandes" element={<MesDemandes />} />
           <Route path="/chat" element={<Chat />} />
+          <Route path="/parrainage" element={<Parrainage />} />
           <Route path="/mes-offres" element={<Follow_Offer />} />
           <Route path="/dashboard-presta" element={<Dashboard_presta />} />
-          {/* route pour voir le suivie de la demande ( presta) */}
-          {/* route des pages admin */}
-          <Route path="/rating" element={<Rating />} />
-          <Route path="/parrainage" element={<Parrainage />} />
+          <Route path="/admin-dashboard-client" element={<Admin_Client />} />
+          <Route path="/admin-dashboard-prestataire" element={<Admin_Prestataire />} />
+          <Route path="/admin-dashboard-demande" element={<Admin_Demande />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </div>

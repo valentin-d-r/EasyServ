@@ -1,25 +1,3 @@
-.container {
-  width: 25rem;
-  max-width: 25rem;
-  margin: 1rem;
-  padding: 2rem;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
-  border-radius: var(--border-radius);
-  background: #ffffff;
-}
-
-@media(min-width:768px) {
-  .container {
-    width: 25rem;
-    max-width: 25rem;
-    margin: 1rem;
-    padding: 2rem;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
-    border-radius: var(--border-radius);
-    background: #ffffff;
-  }
-}
-
 .container,
 .form__input,
 .form__button {
