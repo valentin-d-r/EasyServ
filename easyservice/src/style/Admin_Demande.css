@@ -10,6 +10,26 @@
     font-weight: bold;
 }
 
+.image-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    flex-basis: 23%;
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.image-container p {
+    margin-top: 10px;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -37,19 +57,7 @@ table {
 }
 
 /* Styles des boutons */
-.dashdemande-edit-button {
-    max-width: 10rem;
-    width: 100%;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    color: #fff;
-    background-color: #252c6a;
-    margin: 2px;
-    padding: 8px;
-}
-
+.dashdemande-edit-button,
 .dashdemande-delete-button {
     max-width: 10rem;
     width: 100%;
@@ -58,9 +66,16 @@ table {
     cursor: pointer;
     font-weight: bold;
     color: #fff;
-    background-color: #cc3333;
     margin: 2px;
     padding: 8px;
+}
+
+.dashdemande-edit-button {
+    background-color: #252c6a;
+}
+
+.dashdemande-delete-button {
+    background-color: #cc3333;
 }
 
 /* Responsive */
@@ -77,5 +92,15 @@ table {
     th,
     td {
         padding: 8px;
+    }
+
+    .image-section {
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+
+    .image-container {
+        flex-basis: 48%;
+        margin-bottom: 10px;
     }
 }
