@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import "../style/Login.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Register from "./Register";
 
+// const [items, setItems] = useState([]);
+
+// useEffect(() => {
+//   localStorage.setItem('id', JSON.stringify(items));
+// }, [items]);
+
 const handleSubmit = async (e) => {
   console.log("----|||||test");
+  
   e.preventDefault();
   // Récupérer les valeurs des champs du formulaire
   const mail = e.target.elements.Email.value;
@@ -29,13 +36,19 @@ const handleSubmit = async (e) => {
         },
       }
     );
+<<<<<<< Updated upstream
+=======
+   
+>>>>>>> Stashed changes
     // Traitez la réponse si nécessaire
     console.log(response.data);
   } catch (error) {
     // Gérez les erreurs de requête
     console.error(error);
   }
+  
 };
+
 
 const Login = () => (
   <div className="log-container">
