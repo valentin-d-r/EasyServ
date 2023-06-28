@@ -1,51 +1,46 @@
-import React from 'react'
-import '../style/Profil.css'
+import React from 'react';
+import '../style/Profil.css';
+import chat from "../LogoChat.png"
+const Profil = () => {
+  const handleChatClick = () => {
+    // Rediriger vers la page de chat
+    window.location.href = './chat';
+  };
 
+  const handleEditClick = () => {
+    // Rediriger vers la page d'édition de profil
+    window.location.href = './profil-edit';
+  };
 
-const Profil = () => (
-  <div>
-    <div id="edit-profile-form" className="dialog-box">
-      <div >
-        <h1 id='h1profil'>Mon profil</h1>
-      </div>
-      <div className="profil-wrapper">
-        <div className="profile">
-          <form className="form-profil">
-            {/* Photo */}
-            <fieldset>
-              <legend>Votre avatar</legend>
-              <div className="flex-2">
-                <span className="photo" title="Upload your Avatar!" />
-              </div>
-            </fieldset>
-            <fieldset>
-              <legend>Nom de compte</legend>
-              <div className="flex-2">
-                <input type="text" id="username" />
-              </div>
-            </fieldset>
-            <fieldset>
-              <legend>Email</legend>
-              <div className="flex-2">
-                <input type="text" id="Email" />
-              </div>
-            </fieldset>
-            <fieldset>
-              <legend>Mot de passe</legend>
-              <div className="flex-2">
-                <input type="password" id="password" />
-              </div>
-            </fieldset>
-            <fieldset>
-              <input type="button" className="Btn cancel" defaultValue="Cancel" />
-              <input type="submit" className="Btn" defaultValue="Save Changes" />
-            </fieldset>
-          </form>
+  const handleDeleteClick = () => {
+    // Supprimer le profil (logique de suppression ici)
+    alert('Profil supprimé avec succès');
+  };
+
+  return (
+    <div className="profil-container">
+      <div className="profil-details">
+        <div className="profil-picture">
+          <img src="" alt="Photo de profil" />
+        </div>
+        <div className="profil-info">
+          <h2>Nom Prénom</h2>
+          <p>nom.prenom@mail.com</p>
         </div>
       </div>
+      <div className="profil-actions">
+        <div className="chat-icon" onClick={handleChatClick}>
+          <img src={chat} alt="Chat" />
+        </div>
+        <button className="edit-button" onClick={handleEditClick}>
+          Modifier Profil
+        </button>
+        <button className="delete-button" onClick={handleDeleteClick}>
+          Supprimer Profil
+        </button>
+      </div>
     </div>
-  </div >
-)
-export default Profil
+  );
+};
 
-
+export default Profil;

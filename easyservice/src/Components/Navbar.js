@@ -18,10 +18,10 @@ const Navbar = () => {
             <img src={LogoES} width={70} height={70} title="LogoES" alt="LogoES" />
           </a>
         </div>
-        <div className="search">
+        {/* <div className="search">
           <input type="search" className="search-bar" placeholder="Search..." />
           <i className="fa fa-search search-icon" />
-        </div>
+        </div> */}
         <div className="nav-elements">
           <ul>
             <li>

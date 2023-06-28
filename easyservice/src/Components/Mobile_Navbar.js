@@ -1,11 +1,4 @@
-
-import LogoAccueil from '../LogoAccueil.png'
-import LogoDemandes from '../LogoDemandes.png'
-import LogoLogin from '../LogoLogin.png'
-import LogoProfil from '../LogoProfil.png'
-import LogoChat from '../LogoChat.png'
 import '../style/Navbar.css'
-import { MaterialSymbolsVisibilityRounded } from '../front/Parrainage'
 export function MaterialSymbolsHomeRounded(props) {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" {...props}><path fill="#0095e7" d="M6 21q-.825 0-1.413-.588T4 19v-9q0-.475.213-.9t.587-.7l6-4.5q.275-.2.575-.3T12 3.5q.325 0 .625.1t.575.3l6 4.5q.375.275.588.7T20 10v9q0 .825-.588 1.413T18 21h-4v-7h-4v7H6Z"></path></svg>
@@ -36,7 +29,6 @@ export function BasilChatSolid(props) {
     )
 }
 
-
 const Mobile_Navbar = () => {
     return (
         <nav className="navbar">
@@ -44,16 +36,16 @@ const Mobile_Navbar = () => {
                 <a href="/">
                     <MaterialSymbolsHomeRounded width={30} height={30} />
                 </a>
-                <a href="../Demandes">
+                <a href="../demandes">
                     <LucideHelpingHand width={30} height={30} />
                 </a>
-                <a href="../Profil">
+                <a href="../profil">
                     <IconoirProfileCircle width={30} height={30} />
                 </a>
-                <a href="../Login">
+                <a href="../login">
                     <MdiAccountArrowRight width={30} height={30} />
                 </a>
-                <a href="../Chat">
+                <a href="../chat">
                     <BasilChatSolid width={30} height={30} />
                 </a>
             </div>

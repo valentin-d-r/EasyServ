@@ -1,167 +1,152 @@
-#h1profil {
+/* Styles généraux */
+.profil-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f7f7f7;
     text-align: center;
-    padding: 0;
-    margin: 0;
-    margin-top: 10px;
-    font-size: 24px;
-    font-weight: bold;
 }
 
-.profile {
-    /*display: flex;*/
-    min-height: 100%;
-    height: auto;
-    max-width: 550px;
-    margin: 20px auto;
-    background-color: #f2f4f8;
-    border-radius: 8px;
-    box-shadow: 0 2.5px 5px #ccc;
-}
-
-.content {
-    min-height: 100%;
-    height: 100%;
-    width: 100%;
-    margin: 2.5% auto;
-    overflow: hidden;
-}
-
-.form-profil {
+.profil-details {
     display: flex;
-    flex-direction: column;
-    max-width: 100%;
-    justify-content: center;
-}
-
-span.photo {
-    position: relative;
-    height: 80px;
-    width: 80px;
-    border-radius: 5px;
-    margin: 10px 0 2.5px;
-    display: block;
-    top: 10%;
-    left: 10%;
-    overflow: hidden;
-    background: #ddd url("https://www.adtechnology.co.uk/images/UGM-default-user.png");
-    background-size: 100%;
-    border-radius: 100%;
-    border: 2px solid #ddd;
-}
-
-input[type="file"] {
-
-    color: #555;
-    font-size: 15px;
-    top: 25%;
-    box-shadow: none;
-    margin-left: 0rem;
-    background-color: #ededed;
-    width: 200px;
-    border: 0;
-}
-
-label {
-    color: #555;
-    line-height: 2.1em;
-    margin-left: 10px;
-}
-
-label[for="avatar"] {
-    line-height: 120px;
-}
-
-
-.profile:hover .btn {
-    opacity: 1;
-}
-
-
-/*Input Fields Styles
-  =========================*/
-fieldset {
-    display: flex;
-    text-align: center;
     align-items: center;
     justify-content: center;
-    margin-bottom: 0.3rem;
-    box-sizing: border-box;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+    flex-direction: column;
+    margin-bottom: 30px;
 }
 
-.btn {
-    position: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    top: 45%;
-    left: 25%;
-    background-color: #ddd;
-    padding: 10px 15px;
-    border-radius: 4px;
+.profil-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.profil-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profil-info h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.profil-info p {
+    color: #888;
+    margin-bottom: 0;
+}
+
+.profil-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.chat-icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #0095E7;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.chat-icon img {
+    width: 60%;
+    height: auto;
+}
+
+.chat-icon:hover {
+    background-color: #252c6a;
+}
+
+.edit-button,
+.delete-button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    transition: 0.5s ease;
+    font-weight: bold;
     color: #fff;
+    background-color: #0095E7;
+    transition: background-color 0.3s ease;
+    margin: 10px;
 }
 
-input.Btn {
-    width: 48%;
-    float: left;
-    display: block;
-    margin: 20px auto;
-    margin-left: 1%;
-    padding: 15px 0;
-    font-size: 16px;
-    color: #fff;
-    cursor: pointer;
-    background-color: #0095E7(57, 203, 88, 0.65);
-    box-shadow: inset 0 0 0 2px #0095E7,
-        0 2px 0 0 #0095E7(57, 203, 88, 0.5);
-    transition: 0.5s ease;
+.edit-button:hover,
+.delete-button:hover {
+    background-color: #252c6a;
 }
 
-input.Btn:hover {
-    background-color: #6da9d1;
-}
+/* Styles responsives */
+@media screen and (max-width: 768px) {
+    .profil-details {
+        margin-bottom: 20px;
+    }
 
-@media(min-width:1024px) {
-    #nav-mobile {
-        display: none;
+    .profil-picture {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profil-info h2 {
+        font-size: 20px;
+    }
+
+    .chat-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .chat-icon img {
+        width: 50%;
+    }
+
+    .edit-button,
+    .delete-button {
+        padding: 10px 16px;
+        font-size: 14px;
+        margin: 5px;
     }
 }
 
-/*Media Queries
-  =========================*/
-@media only screen and (min-width: 768px) {
-
-    /*Desktop*/
-    .search {
-        top: 0;
-        left: 0;
-        right: 0;
-        display: flex;
-        align-items: center;
-        margin: 0 auto;
+@media screen and (max-width: 480px) {
+    .profil-details {
+        margin-bottom: 10px;
     }
-}
 
-@media only screen and (max-width: 768px) {
-
-    /*tab*/
-    .search {
-        top: 0;
-        left: 0;
-        right: 0;
-        display: flex;
-        align-items: center;
-        margin: 0 auto;
+    .profil-picture {
+        width: 100px;
+        height: 100px;
     }
-}
 
-@media only screen and (min-width: 320px) and (max-width: 520px) {
+    .profil-info h2 {
+        font-size: 18px;
+    }
 
-    /*Phone*/
-    .profile {
-        width: 90%;
+    .chat-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .chat-icon img {
+        width: 40%;
+    }
+
+    .edit-button,
+    .delete-button {
+        padding: 8px 14px;
+        font-size: 12px;
+        margin: 3px;
     }
 }

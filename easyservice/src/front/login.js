@@ -29,7 +29,6 @@ const handleSubmit = async (e) => {
         },
       }
     );
-
     // Traitez la réponse si nécessaire
     console.log(response.data);
   } catch (error) {

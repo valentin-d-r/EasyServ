@@ -30,7 +30,7 @@ function App() {
           <Route path="/profil-edit" element={<EditProfil />} />
           <Route path="/demandes" element={<MesDemandes />} />
           <Route path="/chat" element={<Chat />} />
-          <Route path="/mesoffres" element={<Follow_Offer />} />
+          <Route path="/mes-offres" element={<Follow_Offer />} />
           <Route path="/dashboard-presta" element={<Dashboard_presta />} />
           {/* route pour voir le suivie de la demande ( presta) */}
           {/* route des pages admin */}

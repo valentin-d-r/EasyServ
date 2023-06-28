@@ -19,7 +19,6 @@
     border-bottom: 1px solid hsl(0, 0%, 90%)
 }
 
-
 .voir_offre {
     display: flex;
     justify-content: center;
@@ -28,5 +27,5 @@
 }
 
 input.voir_offre:hover {
-    background-color: #6da9d1;
+    background-color: #252c6a;
 }
