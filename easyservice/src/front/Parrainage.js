@@ -10,7 +10,7 @@ export function MaterialSymbolsVisibilityRounded(props) {
 const Parrainage = () => {
     return (
         <div className="parrainage-container">
-            <h1>Programme de Parrainage</h1>
+            <h1 id='h1parrain'>Programme de Parrainage</h1>
             <div className="parrainage-images">
                 <div className="parrainage-image">
                     <img src={LogoParrainage} width={70} height={70} title="LogoParrainage" alt="LogoParrainage" />

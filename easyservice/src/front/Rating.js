@@ -35,7 +35,7 @@ function Rating() {
     };
     return (
         <div className="Rating">
-            <h1>Noter un client ou un prestataire</h1>
+            <h1 id='h1rate'>Noter un client ou un prestataire</h1>
             <div className="star-rate">{renderStars()}</div>
             <label>Commentaire
                 <textarea

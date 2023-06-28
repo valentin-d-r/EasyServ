@@ -6,7 +6,7 @@ const Profil = () => (
   <div>
     <div id="edit-profile-form" className="dialog-box">
       <div >
-        <h1>Modifier mon profil</h1>
+        <h1 id='h1profil'>Mon profil</h1>
       </div>
       <div className="profil-wrapper">
         <div className="profile">

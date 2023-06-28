@@ -3,6 +3,7 @@ import Home from './front/Home';
 import Login from './front/Login';
 import Register from './front/Register';
 import Profil from './front/Profil';
+import EditProfil from "./front/Profil_Edit";
 import MesDemandes from './front/Demandes';
 import NotFound from './front/Erreur404';
 import Navbar from "./Components/Navbar";
@@ -26,6 +27,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/profil" element={<Profil />} />
+          <Route path="/profil-edit" element={<EditProfil />} />
           <Route path="/demandes" element={<MesDemandes />} />
           <Route path="/chat" element={<Chat />} />
           <Route path="/mesoffres" element={<Follow_Offer />} />
