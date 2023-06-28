@@ -1,6 +1,5 @@
 const express = require('express');
-const mongoose = require('mongoose');
-const mysql = require('mysql');
+
 
 const userRoutes = require('./Routes/user'); // Route utilisé pour gestion user
 
