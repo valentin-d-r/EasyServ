@@ -15,8 +15,10 @@ const handleSubmit = async (e) => {
 
   e.preventDefault();
   // Récupérer les valeurs des champs du formulaire
-  const mail = e.target.elements.Email.value;
-  const password = e.target.elements.Password.value;
+  console.log("----|||||test2");
+  const mail = e.target.elements.mail.value;
+  const password = e.target.elements.password.value;
+  
   // Ajoutez d'autres champs selon vos besoins
   // Créez un objet contenant les données à envoyer
   const data = {
@@ -38,6 +40,10 @@ const handleSubmit = async (e) => {
     );
     // Traitez la réponse si nécessaire
     console.log(response.data);
+    const token = JSON.stringify(response.data);
+    localStorage.setItem('tokenId', token);
+    console.log("Set dans local storage");
+
   } catch (error) {
     // Gérez les erreurs de requête
     console.error(error);
