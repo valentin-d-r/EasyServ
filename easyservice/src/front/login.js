@@ -36,10 +36,6 @@ const handleSubmit = async (e) => {
         },
       }
     );
-<<<<<<< Updated upstream
-=======
-   
->>>>>>> Stashed changes
     // Traitez la réponse si nécessaire
     console.log(response.data);
   } catch (error) {
