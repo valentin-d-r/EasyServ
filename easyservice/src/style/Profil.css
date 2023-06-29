@@ -1,5 +1,4 @@
 /* Profil.css */
-
 .profil-container {
     display: flex;
     flex-direction: column;
@@ -8,7 +7,6 @@
     padding: 20px;
     text-align: center;
 }
-
 
 .profil-picture img {
     width: 150px;
@@ -50,8 +48,6 @@
     align-content: center;
     width: 100%;
 }
-
-
 
 .chat-icon {
     width: 40px;
@@ -133,7 +129,6 @@
     background-color: #cc3333;
     color: #fff;
 }
-
 
 /* Colors for action icons */
 .chat-icon {
