@@ -19,7 +19,7 @@ import Admin_Prestataire from "./Admin/Admin_Prestataire";
 import Admin_Demande from "./Admin/Admin_Demande";
 function App() {
   return (
-    <body>
+    <><body>
       <div>
         <Navbar />
       </div>
@@ -35,7 +35,7 @@ function App() {
           <Route path="/chat" element={<Chat />} />
           <Route path="/parrainage" element={<Parrainage />} />
           <Route path="/mes-offres" element={<Follow_Offer />} />
-          <Route path="/dashboard-presta" element={<Dashboard_presta />} />
+          <Route path="/dashboard-prestataire" element={<Dashboard_presta />} />
           <Route path="/admin-dashboard-client" element={<Admin_Client />} />
           <Route path="/admin-dashboard-prestataire" element={<Admin_Prestataire />} />
           <Route path="/admin-dashboard-demande" element={<Admin_Demande />} />
@@ -45,10 +45,9 @@ function App() {
       <div>
         <Mobile_Navbar />
       </div>
-      <div>
-        <Footer />
-      </div>
-    </body>
+
+    </body><Footer /></>
+
   );
 }
 

@@ -1,11 +1,21 @@
 import React from 'react';
 import '../style/Profil.css';
 import chat from "../LogoChat.png";
+import client from "../LogoDemandes.png";
+import prestataire from "../LogoServices.png";
 import photo from "../photo.png";
 const Profil = () => {
   const handleChatClick = () => {
     // Rediriger vers la page de chat
     window.location.href = './chat';
+  };
+  const handleClientClick = () => {
+    // Rediriger vers la page de chat
+    window.location.href = './mes-offres';
+  };
+  const handlePrestataireClick = () => {
+    // Rediriger vers la page de chat
+    window.location.href = './dashboard-prestataire';
   };
 
   const handleEditClick = () => {
@@ -30,17 +40,27 @@ const Profil = () => {
         </div>
       </div>
       <div className="profil-actions">
-        <div className="chat-icon" onClick={handleChatClick}>
-          <img src={chat} alt="Chat" />
+        <div className="action-button">
+          <div className="chat-icon" onClick={handleChatClick}>
+            <img src={chat} alt="Chat" />
+          </div>
+          <div className="Client-icon" onClick={handleClientClick}>
+            <img src={client} alt="Mes-offres" />
+          </div>
+          <div className="Prestataire-icon" onClick={handlePrestataireClick}>
+            <img src={prestataire} alt="Mes-services" />
+          </div>
+        </div >
+        <div className="profil-button">
+          <button className="edit-button" onClick={handleEditClick}>
+            Modifier Profil
+          </button>
+          <button className="delete-button" onClick={handleDeleteClick}>
+            Supprimer Profil
+          </button>
         </div>
-        <button className="edit-button" onClick={handleEditClick}>
-          Modifier Profil
-        </button>
-        <button className="delete-button" onClick={handleDeleteClick}>
-          Supprimer Profil
-        </button>
       </div>
-    </div>
+    </div >
   );
 };
 
