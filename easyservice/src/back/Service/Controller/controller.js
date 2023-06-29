@@ -79,17 +79,7 @@ exports.showAllServices = (req, res, next) => {
 };
 
 exports.deleteService = (req, res, next) => {
-    const authHeader = req.headers.authorization;
-    const token = authHeader && authHeader.split(' ')[1]; //psk c'est un bearer
-
-    if (!token) {
-        return res.sendStatus(401).json(error); 
-    }
-
-    jwt.verify(token, 'chiffrement', (err, decoded) => {
-        if (err) {
-            return res.sendStatus(403).json(err); 
-        }
+    
         
         const idService = decoded.idService;
         console.log("--> Idservice");
@@ -110,9 +100,9 @@ exports.deleteService = (req, res, next) => {
 
 
         
-    });
+    };
 
-};
+
 
 exports.showToken = (req, res, next) => {
     console.log("--->Token");

@@ -151,7 +151,9 @@ exports.login = (req, res, next) => {
                         token: jwt.sign(
                             { 
                               userId: result[0].id,
-                              role: result[0].role
+                              role: result[0].role,
+                              firstname: result[0].firstname,
+                              surname: result[0].surname
                             },
                             'chiffrement',  //Clé de chiffrement du token
                             { expiresIn: '24h' })
