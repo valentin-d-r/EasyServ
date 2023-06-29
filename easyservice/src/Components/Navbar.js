@@ -31,11 +31,15 @@ const Navbar = () => {
               <NavLink to="/demandes">Mes demandes</NavLink>
             </li>
             <li>
+              <NavLink to="/composants">Composants</NavLink>
+            </li>
+            <li>
               <NavLink to="/profil">Mon profil</NavLink>
             </li>
             <li>
               <NavLink to="/parrainage" >Parrainage</NavLink>
             </li>
+
             <li>
               <NavLink to="/chat">Discussion</NavLink>
             </li>

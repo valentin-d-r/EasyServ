@@ -18,7 +18,7 @@ const handleSubmit = async (e) => {
   console.log("----|||||test2");
   const mail = e.target.elements.mail.value;
   const password = e.target.elements.password.value;
-  
+
   // Ajoutez d'autres champs selon vos besoins
   // Créez un objet contenant les données à envoyer
   const data = {

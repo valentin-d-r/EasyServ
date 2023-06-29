@@ -17,9 +17,10 @@ import Dashboard_presta from "./front/Dashboard_presta";
 import Admin_Client from "./Admin/Admin_Client";
 import Admin_Prestataire from "./Admin/Admin_Prestataire";
 import Admin_Demande from "./Admin/Admin_Demande";
+import Dev_tiers from "./front/Dev_tiers";
 function App() {
   return (
-    <><body>
+    <body>
       <div>
         <Navbar />
       </div>
@@ -39,14 +40,15 @@ function App() {
           <Route path="/admin-dashboard-client" element={<Admin_Client />} />
           <Route path="/admin-dashboard-prestataire" element={<Admin_Prestataire />} />
           <Route path="/admin-dashboard-demande" element={<Admin_Demande />} />
+          <Route path="/composants" element={<Dev_tiers />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </div>
       <div>
         <Mobile_Navbar />
       </div>
-
-    </body><Footer /></>
+      <Footer />
+    </body>
 
   );
 }

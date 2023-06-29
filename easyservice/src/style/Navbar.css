@@ -52,37 +52,6 @@
   background-color: #574c4c;
 }
 
-.search {
-  float: left;
-  position: relative;
-  top: 4px;
-  right: 100px;
-  padding-bottom: 0;
-}
-
-.search-bar {
-  width: 14rem;
-  color: #252c6a;
-  background-color: #eee;
-  border-top: 2px solid black;
-  padding: 5px;
-  padding-left: 15px;
-  display: inline;
-  border-radius: 20px;
-  -webkit-transition: 0.4s ease;
-  transition: 0.4s ease;
-}
-
-.search-icon {
-  color: gray;
-  margin-left: -27.5px;
-}
-
-.search-bar:focus {
-  width: 16rem;
-  outline: none;
-}
-
 .mobile_navbar {
   background-color: #f5f5f5;
   position: fixed;
@@ -97,7 +66,7 @@
 
 #notifbutton {
   color: white;
-  background-color: #252c6a;
+  background-color: hsl(234, 49%, 55%);
 }
 
 

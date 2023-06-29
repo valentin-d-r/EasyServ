@@ -6,8 +6,8 @@ const Home = () => (
 
   <div>
     <div>
-      <div class="flex-container">
-        <div class="home-wrapper">
+      <div className="flex-container">
+        <div className="home-wrapper">
           <Offer />
           <Offer />
           <Offer />
