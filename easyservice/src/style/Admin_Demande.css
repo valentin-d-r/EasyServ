@@ -1,0 +1,106 @@
+/* Styles généraux */
+.container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+#dashdmd {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.image-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    flex-basis: 23%;
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.image-container p {
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Styles spécifiques pour le tableau de demandes */
+table {
+    margin-bottom: 20px;
+}
+
+/* Styles des boutons */
+.dashdemande-edit-button,
+.dashdemande-delete-button {
+    max-width: 10rem;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #fff;
+    margin: 2px;
+    padding: 8px;
+}
+
+.dashdemande-edit-button {
+    background-color: #252c6a;
+}
+
+.dashdemande-delete-button {
+    background-color: #cc3333;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    #dashdmd {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+    .image-section {
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+
+    .image-container {
+        flex-basis: 48%;
+        margin-bottom: 10px;
+    }
+}
